@@ -17,4 +17,8 @@ export class ShowDataService {
     this.shows.push(new Show(9, 'The Punisher'));
     this.shows.push(new Show(10, 'The Walking Dead'));
   }
+
+  saveShow(show: Show) {
+    this.shows.push(show);
+  }
 }

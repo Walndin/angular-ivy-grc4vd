@@ -1,5 +1,4 @@
-<p>show-form works!</p>
-<app-show-list></app-show-list>
+<p></p>
 <form>
   <h2>Serie hinzufügen:</h2>
   <div class="mb-2">
@@ -10,7 +9,20 @@
       name="newShowID"
       type="number"
       placeholder="Hier die ID der Serie eingeben!"
+      [(ngModel)]="show.id"
     />
   </div>
-  <button type="submit" class="btn btn-primary">absenden</button>
+  <div>
+    <label for="newShowName">Name:</label>
+    <input
+      class="form-control"
+      id="newShowName"
+      name="newShowName"
+      type="string"
+      placeholder="Hier den Namen der Serie eingeben!"
+      [(ngModel)]="show.title"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="save()">absenden</button>
 </form>
