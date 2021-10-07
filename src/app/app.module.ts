@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ShowListComponent } from './components/show-list/show-list.component';
 import { ShowDataService } from './services/show-data.service';
+import { ShowFormComponent } from './components/show-form/show-form.component';
 
 
 import { AppComponent } from './app.component';
