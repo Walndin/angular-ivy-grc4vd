@@ -8,14 +8,10 @@ import { ShowDataService } from '../../services/show-data.service';
   styleUrls: ['./show-form.component.css'],
 })
 export class ShowFormComponent implements OnInit {
-  
+  show: Show;
 
   constructor(private showDataService: ShowDataService) {
-    class show = Show {
-      return null;
-    }
     this.show = new Show(null, null);
-    
   }
 
   ngOnInit() {}
