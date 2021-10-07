@@ -11,7 +11,7 @@ import { HelloComponent } from './hello.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent, ShowListComponent],
+  declarations: [AppComponent, HelloComponent, ShowListComponent, ShowFormComponent],
   bootstrap: [AppComponent],
   providers:[ShowDataService]
 })
