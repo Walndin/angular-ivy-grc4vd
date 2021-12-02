@@ -8,7 +8,7 @@ import { ShowDataService } from '../../services/show-data.service';
   styleUrls: ['./show-list.component.css'],
 })
 export class ShowListComponent implements OnInit {
-  showEdit: Show;
+  editShow: Show;
 
   constructor(private showDataService: ShowDataService) {}
   get shows(): Show[] {
@@ -16,7 +16,23 @@ export class ShowListComponent implements OnInit {
   }
 
   edit(show: Show) {
-    this.showEdit = show;
+    this.editShow = show;
+  }
+  toEdit(show: Show): boolean {
+    if (!this.editShow) {
+      return false;
+    } else if (this.editShow !== show) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  saveEdit() {
+    this.showDataService.saveEditShow(this.editShow);
+    this.editShow = new Show(null, null);
+  }
+  delete(show: Show) {
+    this.showDataService.deleteShow(show);
   }
 
   ngOnInit() {}

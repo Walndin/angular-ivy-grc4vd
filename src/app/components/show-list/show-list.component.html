@@ -11,15 +11,20 @@
   </thead>
   <tbody>
     <ng-container *ngFor="let s of shows">
-      <tr>
+      <tr *ngIf="!toEdit(s)">
         <td>{{ s.id }}</td>
         <td>{{ s.title }}</td>
         <td><button class="material-icons" (click)="edit(s)">edit</button></td>
-        <td><button class="material-icons">delete</button></td>
+        <td>
+          <button class="material-icons" (click)="delete(s)">delete</button>
+        </td>
       </tr>
-      <tr>
+      <tr *ngIf="toEdit(s)">
         <td><input [(ngModel)]="s.id" /></td>
-        <td colspan="2" class="material-icons"><button>save</button></td>
+        <td><input [(ngModel)]="s.title" /></td>
+        <td colspan="2" class="material-icons" (click)="saveEdit()">
+          <button>save</button>
+        </td>
       </tr>
     </ng-container>
   </tbody>
