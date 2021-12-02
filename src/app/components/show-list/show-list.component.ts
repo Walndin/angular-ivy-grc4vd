@@ -15,9 +15,8 @@ export class ShowListComponent implements OnInit {
     return this.showDataService.shows;
   }
 
-  edit(show): Show {
-    this.showDataService.saveEditShow;
-    return null;
+  edit(show: Show) {
+    this.showEdit = show;
   }
 
   ngOnInit() {}

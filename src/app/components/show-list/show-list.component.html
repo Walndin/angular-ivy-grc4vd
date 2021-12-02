@@ -10,11 +10,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let s of shows">
-      <td>{{ s.id }}</td>
-      <td>{{ s.title }}</td>
-      <td><button class="material-icons">edit</button></td>
-      <td><button class="material-icons">delete</button></td>
-    </tr>
+    <ng-container *ngFor="let s of shows">
+      <tr>
+        <td>{{ s.id }}</td>
+        <td>{{ s.title }}</td>
+        <td><button class="material-icons" (click)="edit(s)">edit</button></td>
+        <td><button class="material-icons">delete</button></td>
+      </tr>
+      <tr>
+        <td><input [(ngModel)]="s.id" /></td>
+        <td colspan="2" class="material-icons"><button>save</button></td>
+      </tr>
+    </ng-container>
   </tbody>
 </table>
