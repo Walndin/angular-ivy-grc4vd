@@ -8,12 +8,17 @@ import { ShowDataService } from '../../services/show-data.service';
   styleUrls: ['./show-list.component.css'],
 })
 export class ShowListComponent implements OnInit {
-  
-  constructor(private showDataService: ShowDataService) {
+  showEdit: Show;
+
+  constructor(private showDataService: ShowDataService) {}
+  get shows(): Show[] {
+    return this.showDataService.shows;
   }
-  get shows(): Show[ ] {return this.showDataService.shows;}
-  
-  
+
+  edit(show): Show {
+    this.showDataService.saveEditShow;
+    return null;
+  }
 
   ngOnInit() {}
 }

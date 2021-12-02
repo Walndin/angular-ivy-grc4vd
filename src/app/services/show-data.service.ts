@@ -21,4 +21,8 @@ export class ShowDataService {
   saveShow(show: Show) {
     this.shows.push(show);
   }
+
+  saveEditShow(show: Show) {
+    this.shows.filter;
+  }
 }

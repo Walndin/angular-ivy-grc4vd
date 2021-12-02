@@ -5,12 +5,16 @@
     <tr>
       <th>ID</th>
       <th>Serientitel</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let s of shows">
       <td>{{ s.id }}</td>
       <td>{{ s.title }}</td>
+      <td><button class="material-icons">edit</button></td>
+      <td><button class="material-icons">delete</button></td>
     </tr>
   </tbody>
 </table>
